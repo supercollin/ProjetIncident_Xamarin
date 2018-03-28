@@ -3,15 +3,17 @@
 	<ContentPage.Content>
         <StackLayout Margin="10,20">
             <Label 
-                Text="Liste des incidents déjà déclaré" 
+                Text="Liste des incidents déjà déclarés" 
                 VerticalOptions="Center" 
                 HorizontalOptions="Center"
             />
             <ListView 
                 ItemsSource="{Binding IncidentsList}"
+                SelectedItem="{Binding selectedItemDate}"
             />
             <Button 
                 Text="Nouvel incident"
+                Command="{Binding AddIncident}"
              />
         </StackLayout>
 	</ContentPage.Content>

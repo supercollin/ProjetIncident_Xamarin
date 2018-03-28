@@ -16,9 +16,11 @@
                 />
                 <Button 
                     Text="Se connecter"
+                    Command="{Binding goToIncidentlist}"
                 />
                 <Button 
                     Text="S'inscrire"
+                    Command="{Binding goToSignUp}"
                 />
             </StackLayout>
         </StackLayout>

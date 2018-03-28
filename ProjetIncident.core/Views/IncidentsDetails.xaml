@@ -2,6 +2,24 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ProjetIncident.Core.Views.IncidentsDetails">
 	<ContentPage.Content>
         <StackLayout>
+            <Button
+                Margin='250,0,0,0'
+                Text="Back"
+                Command="{Binding Back}"
+            />
+            <StackLayout>
+                <Image
+                    />
+                <Label
+                    Text="description"
+                />
+                <Label
+                    Text="lieu"
+                />
+                <Label
+                    Text="date"
+                />
+            </StackLayout>
         </StackLayout>
 	</ContentPage.Content>
 </ContentPage>

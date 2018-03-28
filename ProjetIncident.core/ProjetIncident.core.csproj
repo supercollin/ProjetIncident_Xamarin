@@ -35,6 +35,7 @@
     <Compile Remove="Views\ConnexionPage.xaml.cs" />
     <Compile Remove="Views\ProjetIncidentPage.xaml.cs" />
     <Compile Remove="Views\Connexion.cs" />
+    <Compile Remove="NavigationController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="App.xaml.cs">
@@ -67,5 +68,6 @@
     <Folder Include="DataAccess\" />
     <Folder Include="ViewModel\" />
     <Folder Include="Views\" />
+    <Folder Include="Commands\" />
   </ItemGroup>
 </Project>

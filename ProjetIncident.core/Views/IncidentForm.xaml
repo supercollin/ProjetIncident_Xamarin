@@ -5,7 +5,9 @@
             <Label
                 Text="détails de l'incident:"
             />
-            <Editor/>
+            <Editor
+                HeightRequest="150"
+            />
             <ListView
                 HeightRequest="150"
                 ItemsSource="{Binding IncidentsListPhotos}"
@@ -18,6 +20,7 @@
              />
             <Button
                 Text="Confirmer l'incident"
+                Command="{Binding goToIncidents}"
             />
         </StackLayout>
 	</ContentPage.Content>

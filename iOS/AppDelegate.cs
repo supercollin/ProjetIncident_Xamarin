@@ -16,7 +16,7 @@ namespace ProjetIncident.iOS
 
             SQLitePCL.raw.SetProvider(new SQLitePCL.SQLite3Provider_sqlite3());
 
-            LoadApplication(new core.App());
+            LoadApplication(new Core.App());
 
             return base.FinishedLaunching(app, options);
         }

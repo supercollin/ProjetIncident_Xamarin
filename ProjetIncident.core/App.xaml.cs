@@ -7,7 +7,6 @@ namespace ProjetIncident.Core
         public App()
         {
             InitializeComponent();
-
             MainPage = new Views.Connexion();
         }
 
