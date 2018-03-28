@@ -14,6 +14,7 @@
             />
             <Button
                 Text="Ajouter une photo"
+                Command="{Binding TakePhoto}"
             />
             <Button
                 Text="Localiser l'incident"
