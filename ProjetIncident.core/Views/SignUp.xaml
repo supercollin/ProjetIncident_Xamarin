@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ProjetIncident.Core.Views.SignUp">
+	<ContentPage.Content>
+        <StackLayout Margin="30,20" VerticalOptions="Center">
+            <Image
+                Source="icon.png"
+                HeightRequest="150"
+            />
+            <StackLayout Margin="30,20" VerticalOptions="Center">
+                <Entry 
+                    Placeholder="Email"
+                />
+                <Entry 
+                    Placeholder="Nom"
+                />
+                <Entry 
+                    Placeholder="Prénom"
+                />
+                <Entry 
+                    Placeholder="Mot de passe"
+                    IsPassword="{Binding isFocused}"
+                />
+                <Entry 
+                    Placeholder="Confirmation de mot de passe"
+                />
+                <Button 
+                    Text="S'Inscrire"
+                />
+            </StackLayout>
+        </StackLayout>
+	</ContentPage.Content>
+</ContentPage>

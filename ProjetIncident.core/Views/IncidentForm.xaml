@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ProjetIncident.Core.Views.IncidentForm">
+	<ContentPage.Content>
+        <StackLayout Margin="30,20" VerticalOptions="Center">
+            <Label
+                Text="détails de l'incident:"
+            />
+            <Editor/>
+            <ListView
+                HeightRequest="150"
+                ItemsSource="{Binding IncidentsListPhotos}"
+            />
+            <Button
+                Text="Ajouter une photo"
+            />
+            <Button
+                Text="Localiser l'incident"
+             />
+            <Button
+                Text="Confirmer l'incident"
+            />
+        </StackLayout>
+	</ContentPage.Content>
+</ContentPage>
