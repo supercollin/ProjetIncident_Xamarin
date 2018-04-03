@@ -5,7 +5,7 @@ using Xamarin.Forms;
 
 namespace ProjetIncident.core.Converters
 {
-    public class ImageNameToImageSourceConverter
+    public class ImageNameToImageSourceConverter : IValueConverter
     {
 		public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
 		{

@@ -8,9 +8,7 @@
             <Editor
                 HeightRequest="150"
             />
-            <ListView Grid.Column="0"
-                      Grid.Row="1"
-                      ItemsSource="{Binding IncidentsPhotos}"
+            <ListView ItemsSource="{Binding IncidentsPhotos}"
                       SelectedItem="{Binding SelectedPhoto, Mode=TwoWay}">
                 <ListView.ItemTemplate>
                     <DataTemplate>

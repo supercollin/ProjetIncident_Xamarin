@@ -13,11 +13,19 @@ namespace ProjetIncident.Core.ViewModel
     {
         public IncidentFormViewModel()
         {
+
+			IncidentsPhotos = new ObservableCollection<string>();
             SelectedPhoto="icon.png";
             Description = "";
             latitude = 0;
             longitude = 0;
         }
+
+		public ObservableCollection<string> IncidentsPhotos
+		{
+			get => (ObservableCollection<string>)GetProperty<ObservableCollection<string>>();
+			set => SetProperty(value);
+		}
 
 		public string SelectedPhoto
 		{
@@ -91,6 +99,7 @@ namespace ProjetIncident.Core.ViewModel
 						imageString = core.Tools.Convert.BytesToBase64String(imageBinary);
 					}
 					System.IO.File.Delete(photo.Path);
+					IncidentsPhotos.Add(imageString);
                     SelectedPhoto = imageString;
 				}
 			});

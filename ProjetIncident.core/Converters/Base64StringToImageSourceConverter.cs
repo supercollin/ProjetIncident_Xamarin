@@ -5,7 +5,7 @@ using Xamarin.Forms;
 
 namespace ProjetIncident.core.Converters
 {
-    public class Base64StringToImageSourceConverter
+    public class Base64StringToImageSourceConverter : IValueConverter
     {
 		public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
 		{
