@@ -8,10 +8,22 @@
             <Editor
                 HeightRequest="150"
             />
-            <ListView
-                HeightRequest="150"
-                ItemsSource="{Binding IncidentsListPhotos}"
-            />
+            <ListView Grid.Column="0"
+                      Grid.Row="1"
+                      ItemsSource="{Binding IncidentsPhotos}"
+                      SelectedItem="{Binding SelectedPhoto, Mode=TwoWay}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Image Aspect="AspectFit"
+                                   Margin="5"
+                                   HorizontalOptions="CenterAndExpand"
+                                   VerticalOptions="CenterAndExpand"
+                                   Source="{Binding Converter={StaticResource imgBase64Converter}}"/>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
             <Button
                 Text="Ajouter une photo"
                 Command="{Binding TakePhoto}"

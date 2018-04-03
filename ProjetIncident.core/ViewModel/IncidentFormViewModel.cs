@@ -1,6 +1,10 @@
 ﻿using System;
+using System.Collections.ObjectModel;
+using Microsoft.EntityFrameworkCore;
 using ProjetIncident.core.Commands;
+using ProjetIncident.Core.Model;
 using ProjetIncident.Core.ViewModel;
+using System.Linq;
 using Xamarin.Forms;
 
 namespace ProjetIncident.Core.ViewModel
@@ -9,12 +13,41 @@ namespace ProjetIncident.Core.ViewModel
     {
         public IncidentFormViewModel()
         {
+            SelectedPhoto="icon.png";
+            Description = "";
+            latitude = 0;
+            longitude = 0;
         }
+
+		public string SelectedPhoto
+		{
+            get => (string) GetProperty<string>();
+			set => SetProperty(value);
+		}
+
+		public string Description
+		{
+			get => (string)GetProperty<string>();
+			set => SetProperty(value);
+		}
+
+		public double latitude
+		{
+			get => (double)GetProperty<double>();
+			set => SetProperty(value);
+		}
+
+		public double longitude
+		{
+			get => (double)GetProperty<double>();
+			set => SetProperty(value);
+		}
 
 		public DelegateCommand goToIncidents
 		{
 			get => new DelegateCommand(() =>
 			{
+                Incident incident = new Incident(Description,latitude,longitude,0, new DateTime());
 				Application.Current.MainPage = new Views.Incidents();
 			});
 		}
@@ -58,8 +91,7 @@ namespace ProjetIncident.Core.ViewModel
 						imageString = core.Tools.Convert.BytesToBase64String(imageBinary);
 					}
 					System.IO.File.Delete(photo.Path);
-					/*Photos.Add(imageString);
-					SelectedPhoto = imageString;*/
+                    SelectedPhoto = imageString;
 				}
 			});
 		}
