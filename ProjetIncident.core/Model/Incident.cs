@@ -38,8 +38,14 @@ namespace ProjetIncident.Core.Model
         [InverseProperty(nameof(Photo.Incident))]
         public List<Photo> Photos { get; set; }
 
-        public Incident()
+        public Incident(string des, double lat, double lon, double alt, DateTime date )
         {
+			this.Description = des;
+			this.Latitude = lat;
+			this.Longitude = lon;
+			this.Altitude = alt;
+            this.Status = StatusValues.NotSubmitted;
+			this.StatusChangedDate = date;
         }
     }
 }

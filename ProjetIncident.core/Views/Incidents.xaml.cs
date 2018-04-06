@@ -7,6 +7,7 @@ namespace ProjetIncident.Core.Views
 {
     public partial class Incidents : ContentPage
     {
+
         public Incidents()
         {
 			this.BindingContext = new ViewModel.IncidentsViewModel();

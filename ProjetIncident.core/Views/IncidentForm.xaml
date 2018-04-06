@@ -5,19 +5,33 @@
             <Label
                 Text="détails de l'incident:"
             />
-            <Editor/>
-            <ListView
+            <Editor
                 HeightRequest="150"
-                ItemsSource="{Binding IncidentsListPhotos}"
             />
+            <ListView ItemsSource="{Binding IncidentsPhotos}"
+                      SelectedItem="{Binding SelectedPhoto, Mode=TwoWay}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Image Aspect="AspectFit"
+                                   Margin="5"
+                                   HorizontalOptions="CenterAndExpand"
+                                   VerticalOptions="CenterAndExpand"
+                                   Source="{Binding Converter={StaticResource imgBase64Converter}}"/>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
             <Button
                 Text="Ajouter une photo"
+                Command="{Binding TakePhoto}"
             />
             <Button
                 Text="Localiser l'incident"
              />
             <Button
                 Text="Confirmer l'incident"
+                Command="{Binding goToIncidents}"
             />
         </StackLayout>
 	</ContentPage.Content>
